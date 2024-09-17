@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import ComposableArchitecture
 
 @main
 struct _00DaysOfSwiftUIApp: App {
@@ -25,7 +26,12 @@ struct _00DaysOfSwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(
+                store: Store(
+                    initialState: RootFeature.State(),
+                    reducer: { RootFeature() }
+                )
+            )
         }
         .modelContainer(sharedModelContainer)
     }

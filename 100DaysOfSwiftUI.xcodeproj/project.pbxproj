@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EEA3CC6F2C91FD560061E754 /* WeSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3CC6E2C91FD560061E754 /* WeSplitView.swift */; };
 		EEB65FDB2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDA2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift */; };
 		EEB65FDD2C89C3D100694A4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDC2C89C3D100694A4A /* ContentView.swift */; };
 		EEB65FDF2C89C3D100694A4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDE2C89C3D100694A4A /* Item.swift */; };
@@ -15,6 +16,8 @@
 		EEB65FEE2C89C3D200694A4A /* _00DaysOfSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FED2C89C3D200694A4A /* _00DaysOfSwiftUITests.swift */; };
 		EEB65FF82C89C3D200694A4A /* _00DaysOfSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FF72C89C3D200694A4A /* _00DaysOfSwiftUIUITests.swift */; };
 		EEB65FFA2C89C3D200694A4A /* _00DaysOfSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FF92C89C3D200694A4A /* _00DaysOfSwiftUIUITestsLaunchTests.swift */; };
+		EEB660082C91E19600694A4A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EEB660072C91E19600694A4A /* ComposableArchitecture */; };
+		EEB6600A2C91E1CA00694A4A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB660092C91E1CA00694A4A /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EEA3CC6E2C91FD560061E754 /* WeSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitView.swift; sourceTree = "<group>"; };
 		EEB65FD72C89C3D100694A4A /* 100DaysOfSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100DaysOfSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB65FDA2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysOfSwiftUIApp.swift; sourceTree = "<group>"; };
 		EEB65FDC2C89C3D100694A4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 		EEB65FF32C89C3D200694A4A /* 100DaysOfSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 100DaysOfSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB65FF72C89C3D200694A4A /* _00DaysOfSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysOfSwiftUIUITests.swift; sourceTree = "<group>"; };
 		EEB65FF92C89C3D200694A4A /* _00DaysOfSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysOfSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEB660092C91E1CA00694A4A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB660082C91E19600694A4A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EEA3CC6D2C91FD4E0061E754 /* WeSplit */ = {
+			isa = PBXGroup;
+			children = (
+				EEA3CC6E2C91FD560061E754 /* WeSplitView.swift */,
+			);
+			path = WeSplit;
+			sourceTree = "<group>";
+		};
 		EEB65FCE2C89C3D100694A4A = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +112,8 @@
 			children = (
 				EEB65FDA2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift */,
 				EEB65FDC2C89C3D100694A4A /* ContentView.swift */,
+				EEB660092C91E1CA00694A4A /* RootView.swift */,
+				EEA3CC6D2C91FD4E0061E754 /* WeSplit */,
 				EEB65FDE2C89C3D100694A4A /* Item.swift */,
 				EEB65FE02C89C3D200694A4A /* Assets.xcassets */,
 				EEB65FE22C89C3D200694A4A /* Preview Content */,
@@ -146,6 +162,9 @@
 			dependencies = (
 			);
 			name = 100DaysOfSwiftUI;
+			packageProductDependencies = (
+				EEB660072C91E19600694A4A /* ComposableArchitecture */,
+			);
 			productName = 100DaysOfSwiftUI;
 			productReference = EEB65FD72C89C3D100694A4A /* 100DaysOfSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +237,9 @@
 				Base,
 			);
 			mainGroup = EEB65FCE2C89C3D100694A4A;
+			packageReferences = (
+				EEB660062C91E19600694A4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = EEB65FD82C89C3D100694A4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA3CC6F2C91FD560061E754 /* WeSplitView.swift in Sources */,
+				EEB6600A2C91E1CA00694A4A /* RootView.swift in Sources */,
 				EEB65FDD2C89C3D100694A4A /* ContentView.swift in Sources */,
 				EEB65FDF2C89C3D100694A4A /* Item.swift in Sources */,
 				EEB65FDB2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift in Sources */,
@@ -614,6 +638,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EEB660062C91E19600694A4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEB660072C91E19600694A4A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEB660062C91E19600694A4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEB65FCF2C89C3D100694A4A /* Project object */;
 }
