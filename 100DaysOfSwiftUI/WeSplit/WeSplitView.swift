@@ -37,8 +37,6 @@ struct WeSplitFeature {
         Reduce { state, action in
             switch action {
             case .binding(\.checkAmount):
-                // Validate display name
-                print(state.checkAmount)
                 return .none
             case .binding:
                 return .none
