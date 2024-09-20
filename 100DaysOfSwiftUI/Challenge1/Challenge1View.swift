@@ -9,43 +9,10 @@ import Foundation
 import SwiftUI
 import ComposableArchitecture
 
-
-enum UnitOperation {
-    case add(Double), multiple(Double)
-}
-
-private enum Temperature: CaseIterable, Identifiable {
-    case celsius, fahrenheit, kelvin
-    
-    var id: Self {
-        self
-    }
-    
-    var unitOperations: [UnitOperation] {
-        return switch self {
-        case .celsius:
-            [.add(0)]
-        case .fahrenheit:
-            [.multiple(1.8), .add(32)]
-        case .kelvin:
-            [.add(273.15)]
-        }
-    }
-}
-private enum Length: CaseIterable {
-    case meters, kilometers, feet, yards, miles
-}
-private enum Time: CaseIterable {
-    case seconds, minutes, hours, days
-}
-private enum Volume: CaseIterable {
-    case milliliters, liters, cups, pints, gallons
-}
-
 @Reducer
 struct Challenge1Feature {
-    enum Unit: CaseIterable, Identifiable {
-        case temperature
+    enum Unit: Identifiable {
+        case temperature, length, time, volume
         
         var id: Self {
             self
@@ -54,39 +21,7 @@ struct Challenge1Feature {
     
     @ObservableState
     struct State: Equatable {
-        fileprivate let pickerOptions: [Temperature] = [.celsius, .fahrenheit, .kelvin]
-        fileprivate var inputUnit: Temperature = .celsius
-        var inputValue: Double = 0
-        fileprivate var outputUnit: Temperature = .celsius
-        
-        var outputValue: Double {
-            var output = inputValue
-            
-            // Do nothing as there is no conversion needed
-            if inputUnit == outputUnit {
-                return output
-            }
-            
-            for operation in inputUnit.unitOperations.reversed() {
-                switch operation {
-                case let .add(value):
-                    output -= value
-                case let .multiple(value):
-                    output /= value
-                }
-            }
-            
-            for operation in outputUnit.unitOperations {
-                switch operation {
-                case let .add(value):
-                    output += value
-                case let .multiple(value):
-                    output *= value
-                }
-            }
-
-            return output
-        }
+        var unit: Unit = .temperature
     }
     
     // `BindableAction` can let properties in state bindable to UI
@@ -101,47 +36,108 @@ struct Challenge1Feature {
 }
 
 struct Challenge1View: View {
+    private typealias Unit = Challenge1Feature.Unit
+    
     @Bindable var store: StoreOf<Challenge1Feature>
     
     var body: some View {
         Form {
-            Section("Input") {
-                Picker("Unit", selection: $store.inputUnit) {
-                    ForEach(store.pickerOptions) {
+            Section {
+                Picker("Unit", selection: $store.unit) {
+                    ForEach([Unit.temperature, Unit.length, Unit.time, Unit.volume]) {
                         Text(nameForUnit($0)).tag($0)
                     }
-                }
-                HStack {
-                    Text("Value")
-                    Spacer()
-                    TextField("Input Value", value: $store.inputValue, format: .number)
-                        .multilineTextAlignment(.trailing)
-                        .keyboardType(.decimalPad)
                 }
             }
-            Section("Output") {
-                Picker("Unit", selection: $store.outputUnit) {
-                    ForEach(store.pickerOptions) {
-                        Text(nameForUnit($0)).tag($0)
+            switch store.unit {
+            case .temperature:
+                Challenge1UnitConversionView<Challenge1Temperature>.create(
+                    pickerOptions: [.celsius, .fahrenheit, .kelvin],
+                    inputUnit: .celsius,
+                    outputUnit: .celsius,
+                    nameForUnit: { unit in
+                        switch unit {
+                        case .celsius:
+                            "Celsius (°C)"
+                        case .fahrenheit:
+                            "Fahrenheit (°F)"
+                        case .kelvin:
+                            "Kelvin (K)"
+                        }
                     }
-                }
-                HStack {
-                    Text("Value")
-                    Spacer()
-                    Text(store.outputValue, format: .number)
-                }
+                )
+            case .length:
+                Challenge1UnitConversionView<Challenge1Length>.create(
+                    pickerOptions: [.meter, .kilometer, .foot, .yard, .mile],
+                    inputUnit: .meter,
+                    outputUnit: .meter,
+                    nameForUnit: { unit in
+                        switch unit {
+                        case .meter:
+                            "Meter"
+                        case .kilometer:
+                            "Kilometer"
+                        case .foot:
+                            "Foot"
+                        case .yard:
+                            "Yard"
+                        case .mile:
+                            "Mile"
+                        }
+                    }
+                )
+            case .time:
+                Challenge1UnitConversionView<Challenge1Time>.create(
+                    pickerOptions: [.second, .minute, .hour, .day],
+                    inputUnit: .second,
+                    outputUnit: .second,
+                    nameForUnit: { unit in
+                        switch unit {
+                        case .second:
+                            "Second"
+                        case .minute:
+                            "Minute"
+                        case .hour:
+                            "Hour"
+                        case .day:
+                            "Day"
+                        }
+                    }
+                )
+            case .volume:
+                Challenge1UnitConversionView<Challenge1Volume>.create(
+                    pickerOptions: [.milliliter, .liter, .cup, .pint, .gallon],
+                    inputUnit: .milliliter,
+                    outputUnit: .milliliter,
+                    nameForUnit: { unit in
+                        switch unit {
+                        case .milliliter:
+                            "Milliliter"
+                        case .liter:
+                            "Liter"
+                        case .cup:
+                            "Cup"
+                        case .pint:
+                            "Pint"
+                        case .gallon:
+                            "Gallon"
+                        }
+                    }
+                )
             }
         }
     }
     
-    private func nameForUnit(_ unit: Temperature) -> String {
+    private func nameForUnit(_ unit: Unit) -> String {
         switch unit {
-        case .celsius:
-            "Celsius"
-        case .fahrenheit:
-            "Fahrenheit"
-        case .kelvin:
-            "Kelvin"
+        case .temperature:
+            "Temperature"
+        case .length:
+            "Length"
+        case .time:
+            "Time"
+        case .volume:
+            "Volume"
         }
     }
 }
