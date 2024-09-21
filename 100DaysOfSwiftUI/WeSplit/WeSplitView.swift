@@ -78,7 +78,7 @@ struct WeSplitView: View {
                 Text(store.totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
             }
         }
-        .navigationTitle("SwiftUI")
+        .navigationTitle("WeSplit")
         .toolbar {
             if amountIsFocused {
                 ToolbarItemGroup(placement: .keyboard) {

@@ -89,6 +89,7 @@ struct Challenge1UnitConversionView<T: Challenge1UnitType>: View {
                 Text("Value")
                 Spacer()
                 Text(store.outputValue, format: .number)
+                    .foregroundStyle(.secondary)
             }
         }
         

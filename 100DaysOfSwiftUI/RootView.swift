@@ -13,6 +13,7 @@ struct RootFeature {
     @Reducer
     enum Path {
         case weSplit(WeSplitFeature)
+        case challenge1(Challenge1Feature)
     }
     
     @ObservableState
@@ -47,14 +48,19 @@ struct RootView: View {
                 ) {
                     Text("WeSplit")
                 }
-                Text("A Second List Item")
-                Text("A Third List Item")
+                NavigationLink(
+                    state: RootFeature.Path.State.challenge1(Challenge1Feature.State())
+                ) {
+                    Text("Challenge 1")
+                }
             }
             .navigationTitle("Menu")
         } destination: { store in
             switch store.case {
             case let .weSplit(store):
                 WeSplitView(store: store)
+            case let .challenge1(store):
+                Challenge1View(store: store)
             }
         }
     }

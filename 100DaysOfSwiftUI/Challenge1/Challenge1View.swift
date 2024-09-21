@@ -126,6 +126,7 @@ struct Challenge1View: View {
                 )
             }
         }
+        .navigationTitle("Challenge 1")
     }
     
     private func nameForUnit(_ unit: Unit) -> String {
