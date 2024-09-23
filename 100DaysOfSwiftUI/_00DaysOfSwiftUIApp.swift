@@ -25,7 +25,7 @@ struct _00DaysOfSwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
         .modelContainer(sharedModelContainer)
     }
