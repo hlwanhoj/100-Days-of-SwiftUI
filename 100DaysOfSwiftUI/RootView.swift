@@ -12,6 +12,7 @@ struct RootView: View {
         NavigationStack {
             List {
                 NavigationLink("WeSplit", destination: WeSplitView())
+                NavigationLink("Challenge 1", destination: Challenge1View())
             }
             .navigationTitle("Menu")
         }
