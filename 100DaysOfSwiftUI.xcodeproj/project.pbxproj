@@ -21,6 +21,7 @@
 		EEE311C62CA47027001AFD0E /* Challenge1UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE311C52CA47027001AFD0E /* Challenge1UnitType.swift */; };
 		EEE311C82CA47050001AFD0E /* Challenge1Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE311C72CA47050001AFD0E /* Challenge1Units.swift */; };
 		EEE311CA2CA4706F001AFD0E /* Challenge1UnitConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE311C92CA4706F001AFD0E /* Challenge1UnitConversionView.swift */; };
+		EEE311CD2CA47780001AFD0E /* GuessTheFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE311CC2CA47780001AFD0E /* GuessTheFlagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		EEE311C52CA47027001AFD0E /* Challenge1UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge1UnitType.swift; sourceTree = "<group>"; };
 		EEE311C72CA47050001AFD0E /* Challenge1Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge1Units.swift; sourceTree = "<group>"; };
 		EEE311C92CA4706F001AFD0E /* Challenge1UnitConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge1UnitConversionView.swift; sourceTree = "<group>"; };
+		EEE311CC2CA47780001AFD0E /* GuessTheFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				EE31F8E02CA1B648008F4E93 /* RootView.swift */,
 				EE31F8E22CA1B92C008F4E93 /* WeSplit */,
 				EE31F8E52CA1CF0C008F4E93 /* Challenge1 */,
+				EEE311CB2CA47769001AFD0E /* GuessTheFlag */,
 				EEB65FE02C89C3D200694A4A /* Assets.xcassets */,
 				EEB65FE22C89C3D200694A4A /* Preview Content */,
 			);
@@ -162,6 +165,14 @@
 				EEB65FF92C89C3D200694A4A /* _00DaysOfSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = 100DaysOfSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		EEE311CB2CA47769001AFD0E /* GuessTheFlag */ = {
+			isa = PBXGroup;
+			children = (
+				EEE311CC2CA47780001AFD0E /* GuessTheFlagView.swift */,
+			);
+			path = GuessTheFlag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE311CD2CA47780001AFD0E /* GuessTheFlagView.swift in Sources */,
 				EEE311C82CA47050001AFD0E /* Challenge1Units.swift in Sources */,
 				EE31F8E72CA1CF1B008F4E93 /* Challenge1View.swift in Sources */,
 				EE31F8E42CA1B93D008F4E93 /* WeSplitView.swift in Sources */,

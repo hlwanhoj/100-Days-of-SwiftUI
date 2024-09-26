@@ -13,6 +13,7 @@ struct RootView: View {
             List {
                 NavigationLink("WeSplit", destination: WeSplitView())
                 NavigationLink("Challenge 1", destination: Challenge1View())
+                NavigationLink("GuessTheFlag", destination: GuessTheFlagView())
             }
             .navigationTitle("Menu")
         }
