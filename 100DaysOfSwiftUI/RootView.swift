@@ -15,6 +15,7 @@ struct RootView: View {
                 NavigationLink("Challenge 1", destination: Challenge1View())
                 NavigationLink("GuessTheFlag", destination: GuessTheFlagView())
                 NavigationLink("BetterRest", destination: BetterRestView())
+                NavigationLink("WordScramble", destination: WordScrambleView())
             }
             .navigationTitle("Menu")
         }

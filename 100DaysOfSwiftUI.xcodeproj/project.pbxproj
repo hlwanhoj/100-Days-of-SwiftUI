@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		EEB65FDB2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDA2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift */; };
 		EEB65FDD2C89C3D100694A4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDC2C89C3D100694A4A /* ContentView.swift */; };
 		EEB65FDF2C89C3D100694A4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDE2C89C3D100694A4A /* Item.swift */; };
-		EEB65FE12C89C3D200694A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB65FE02C89C3D200694A4A /* Assets.xcassets */; };
 		EEB65FE42C89C3D200694A4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB65FE32C89C3D200694A4A /* Preview Assets.xcassets */; };
 		EEB65FEE2C89C3D200694A4A /* _00DaysOfSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FED2C89C3D200694A4A /* _00DaysOfSwiftUITests.swift */; };
 		EEB65FF82C89C3D200694A4A /* _00DaysOfSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FF72C89C3D200694A4A /* _00DaysOfSwiftUIUITests.swift */; };
@@ -24,6 +23,7 @@
 		EEE311CD2CA47780001AFD0E /* GuessTheFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE311CC2CA47780001AFD0E /* GuessTheFlagView.swift */; };
 		EEE311D22CA7D5C3001AFD0E /* BetterRestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE311D12CA7D5C3001AFD0E /* BetterRestView.swift */; };
 		EEE311D62CAB1A61001AFD0E /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EEE311D52CAB1A61001AFD0E /* SleepCalculator.mlmodel */; };
+		EEE311D92CAEFBB1001AFD0E /* WordScrambleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE311D82CAEFBB1001AFD0E /* WordScrambleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		EEB65FDA2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysOfSwiftUIApp.swift; sourceTree = "<group>"; };
 		EEB65FDC2C89C3D100694A4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EEB65FDE2C89C3D100694A4A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		EEB65FE02C89C3D200694A4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEB65FE32C89C3D200694A4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEB65FE92C89C3D200694A4A /* 100DaysOfSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 100DaysOfSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB65FED2C89C3D200694A4A /* _00DaysOfSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysOfSwiftUITests.swift; sourceTree = "<group>"; };
@@ -64,7 +63,12 @@
 		EEE311CC2CA47780001AFD0E /* GuessTheFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagView.swift; sourceTree = "<group>"; };
 		EEE311D12CA7D5C3001AFD0E /* BetterRestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestView.swift; sourceTree = "<group>"; };
 		EEE311D52CAB1A61001AFD0E /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
+		EEE311D82CAEFBB1001AFD0E /* WordScrambleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EEE311DA2CAEFDBA001AFD0E /* res */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = res; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EEB65FD42C89C3D100694A4A /* Frameworks */ = {
@@ -137,11 +141,12 @@
 				EEB65FDC2C89C3D100694A4A /* ContentView.swift */,
 				EEB65FDE2C89C3D100694A4A /* Item.swift */,
 				EE31F8E02CA1B648008F4E93 /* RootView.swift */,
-				EEB65FE02C89C3D200694A4A /* Assets.xcassets */,
+				EEE311DA2CAEFDBA001AFD0E /* res */,
 				EE31F8E22CA1B92C008F4E93 /* WeSplit */,
 				EE31F8E52CA1CF0C008F4E93 /* Challenge1 */,
 				EEE311CB2CA47769001AFD0E /* GuessTheFlag */,
 				EEE311CE2CA7D595001AFD0E /* BetterRest */,
+				EEE311D72CAEF9CC001AFD0E /* WordScramble */,
 				EEB65FE22C89C3D200694A4A /* Preview Content */,
 			);
 			path = 100DaysOfSwiftUI;
@@ -189,6 +194,14 @@
 			path = BetterRest;
 			sourceTree = "<group>";
 		};
+		EEE311D72CAEF9CC001AFD0E /* WordScramble */ = {
+			isa = PBXGroup;
+			children = (
+				EEE311D82CAEFBB1001AFD0E /* WordScrambleView.swift */,
+			);
+			path = WordScramble;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,6 +216,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EEE311DA2CAEFDBA001AFD0E /* res */,
 			);
 			name = 100DaysOfSwiftUI;
 			productName = 100DaysOfSwiftUI;
@@ -294,7 +310,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEB65FE42C89C3D200694A4A /* Preview Assets.xcassets in Resources */,
-				EEB65FE12C89C3D200694A4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +340,7 @@
 				EE31F8E42CA1B93D008F4E93 /* WeSplitView.swift in Sources */,
 				EEE311D22CA7D5C3001AFD0E /* BetterRestView.swift in Sources */,
 				EE31F8E12CA1B648008F4E93 /* RootView.swift in Sources */,
+				EEE311D92CAEFBB1001AFD0E /* WordScrambleView.swift in Sources */,
 				EEE311C62CA47027001AFD0E /* Challenge1UnitType.swift in Sources */,
 				EEB65FDD2C89C3D100694A4A /* ContentView.swift in Sources */,
 				EEB65FDF2C89C3D100694A4A /* Item.swift in Sources */,
