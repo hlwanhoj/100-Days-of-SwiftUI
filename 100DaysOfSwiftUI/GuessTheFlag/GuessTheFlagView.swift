@@ -43,37 +43,13 @@ struct GuessTheFlagView: View {
                     }
                     
                     ForEach(Array(zip(countries.indices, countries)), id: \.1) { idx, item in
-                        Button {
-                            onTapFlag(at: idx)
-                        } label: {
-                            Image("GuessTheFlag/\(item)")
-                                .shadow(radius: 5)
+                        FlagButton(country: item) {
+                            withAnimation {
+                                onTapFlag(at: idx)
+                            }
                         }
-                        .alert(
-                            "It's correct!",
-                            isPresented: $showCorrectAnswerAlert,
-                            actions: {
-                                Button("Continue") {
-                                    round += 1
-                                    prepareForNextRound()
-                                    showCorrectAnswerAlert = false
-                                }
-                            }
-                        )
-                        .alert(
-                            "Sorry, It's wrong!",
-                            isPresented: $showWrongAnswerAlert,
-                            actions: {
-                                Button("Okay") {
-                                    round += 1
-                                    prepareForNextRound()
-                                    showWrongAnswerAlert = false
-                                }
-                            },
-                            message: {
-                                Text("That's the flag of \(countries[selectedAnswerIndex ?? 0])")
-                            }
-                        )
+                        .rotation3DEffect(.degrees(selectedAnswerIndex != nil && idx == correctAnswer ? 360 : 0), axis: (x: 0, y: 1, z: 0))
+                        .opacity(selectedAnswerIndex != nil && idx != correctAnswer ? 0.25 : 1)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -88,6 +64,31 @@ struct GuessTheFlagView: View {
             .padding(.horizontal, 16)
         }
         .ignoresSafeArea()
+        .alert(
+            "It's correct!",
+            isPresented: $showCorrectAnswerAlert,
+            actions: {
+                Button("Continue") {
+                    round += 1
+                    prepareForNextRound()
+                    showCorrectAnswerAlert = false
+                }
+            }
+        )
+        .alert(
+            "Sorry, It's wrong!",
+            isPresented: $showWrongAnswerAlert,
+            actions: {
+                Button("Okay") {
+                    round += 1
+                    prepareForNextRound()
+                    showWrongAnswerAlert = false
+                }
+            },
+            message: {
+                Text("That's the flag of \(countries[selectedAnswerIndex ?? 0])")
+            }
+        )
         .alert(
             "Good job!",
             isPresented: $showFinalAlert,
@@ -121,6 +122,20 @@ struct GuessTheFlagView: View {
             countries.shuffle()
             correctAnswer = Int.random(in: 0...2)
             selectedAnswerIndex = nil
+        }
+    }
+}
+
+struct FlagButton: View {
+    let country: String
+    let action: () -> Void
+    
+    var body: some View {
+        Button {
+            action()
+        } label: {
+            Image("GuessTheFlag/\(country)")
+                .shadow(radius: 5)
         }
     }
 }
