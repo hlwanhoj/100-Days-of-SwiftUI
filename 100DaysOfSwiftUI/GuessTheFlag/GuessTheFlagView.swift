@@ -13,15 +13,17 @@ import ComposableArchitecture
 struct GuessTheFlagFeature {
     @CasePathable
     enum Alert: Equatable {
-        case continueButtonTapped
+        case nextRoundButtonTapped
+        case resetButtonTapped
     }
     
     @ObservableState
     struct State: Equatable {
         @Presents var alert: AlertState<Alert>?
-        var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
+        var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"]
         var correctAnswer = Int.random(in: 0...2)
         var score = 0
+        var round = 1
     }
     
     // `BindableAction` can let properties in state bindable to UI
@@ -29,7 +31,7 @@ struct GuessTheFlagFeature {
         case binding(BindingAction<State>)
         case alert(PresentationAction<Alert>)
         case tapFlag(Int)
-        case reset
+        case nextRound
     }
     
     var body: some ReducerOf<Self> {
@@ -39,8 +41,12 @@ struct GuessTheFlagFeature {
             switch action {
             case .binding:
                 return .none
-            case .alert(.presented(.continueButtonTapped)):
-                return .send(.reset)
+            case .alert(.presented(.nextRoundButtonTapped)):
+                return .send(.nextRound)
+            case .alert(.presented(.resetButtonTapped)):
+                state.round = 0
+                state.score = 0
+                return .send(.nextRound)
             case .alert:
               return .none
             case let .tapFlag(idx):
@@ -50,23 +56,40 @@ struct GuessTheFlagFeature {
                     state.alert = AlertState {
                         TextState("It's correct!")
                     } actions: {
-                        ButtonState(action: .continueButtonTapped) {
+                        ButtonState(action: .nextRoundButtonTapped) {
                             TextState("Continue")
                         }
                     }
                 } else {
+                    let countries = state.countries
                     state.alert = AlertState {
                         TextState("Sorry, It's wrong!")
                     } actions: {
-                        ButtonState(role: .cancel) {
-                            TextState("Okay")
+                        ButtonState(action: .nextRoundButtonTapped) {
+                            TextState("Continue")
                         }
+                    } message: {
+                        TextState("That's the flag of \(countries[idx])")
                     }
                 }
                 return .none
-            case .reset:
-                state.countries = state.countries.shuffled()
-                state.correctAnswer = Int.random(in: 0...2)
+            case .nextRound:
+                if state.round >= 8 {
+                    let score = state.score
+                    state.alert = AlertState {
+                        TextState("Good job!")
+                    } actions: {
+                        ButtonState(action: .resetButtonTapped) {
+                            TextState("Continue")
+                        }
+                    } message: {
+                        TextState("Your final score is \(score)")
+                    }
+                } else {
+                    state.countries = state.countries.shuffled()
+                    state.correctAnswer = Int.random(in: 0...2)
+                    state.round += 1
+                }
                 return .none
             }
         }
@@ -103,11 +126,8 @@ struct GuessTheFlagView: View {
                     }
                     
                     ForEach(Array(zip(countries.indices, countries)), id: \.1) { idx, item in
-                        Button {
+                        FlagImage(imageKey: "GuessTheFlag/\(item)") {
                             store.send(.tapFlag(idx))
-                        } label: {
-                            Image("GuessTheFlag/\(item)")
-                                .shadow(radius: 5)
                         }
                     }
                 }
@@ -116,9 +136,14 @@ struct GuessTheFlagView: View {
                 .background(.regularMaterial)
                 .clipShape(.rect(cornerRadius: 20))
                 
-                Text("Score: \(store.score)")
-                    .foregroundStyle(.white)
-                    .font(.title.bold())
+                VStack(spacing: 8) {
+                    Text("Round: \(store.round)")
+                        .foregroundStyle(.white)
+                        .font(.title.bold())
+                    Text("Score: \(store.score)")
+                        .foregroundStyle(.white)
+                        .font(.title.bold())
+                }
             }
             .padding(.horizontal, 16)
         }
@@ -134,5 +159,17 @@ struct GuessTheFlagView: View {
                 reducer: { GuessTheFlagFeature() }
             )
         )
+    }
+}
+
+struct FlagImage: View {
+    let imageKey: String
+    let action: @MainActor () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(imageKey)
+                .shadow(radius: 5)
+        }
     }
 }

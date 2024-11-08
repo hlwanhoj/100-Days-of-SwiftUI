@@ -14,6 +14,7 @@ struct RootFeature {
     enum Path {
         case weSplit(WeSplitFeature)
         case challenge1(Challenge1Feature)
+        case guessTheFlag(GuessTheFlagFeature)
     }
     
     @ObservableState
@@ -53,6 +54,11 @@ struct RootView: View {
                 ) {
                     Text("Challenge 1")
                 }
+                NavigationLink(
+                    state: RootFeature.Path.State.guessTheFlag(GuessTheFlagFeature.State())
+                ) {
+                    Text("Guess The Flag")
+                }
             }
             .navigationTitle("Menu")
         } destination: { store in
@@ -61,6 +67,8 @@ struct RootView: View {
                 WeSplitView(store: store)
             case let .challenge1(store):
                 Challenge1View(store: store)
+            case let .guessTheFlag(store):
+                GuessTheFlagView(store: store)
             }
         }
     }

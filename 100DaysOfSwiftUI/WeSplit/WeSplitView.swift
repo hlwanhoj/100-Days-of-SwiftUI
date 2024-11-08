@@ -12,6 +12,7 @@ import ComposableArchitecture
 struct WeSplitFeature {
     @ObservableState
     struct State: Equatable {
+        let tipPercentages: [Double] = Array(stride(from: 0, through: 0.25, by: 0.05))
         var checkAmount: Double = 0.0
         var numberOfPeople: Int = 5
         var tipPercentage: Double = 0.20
@@ -46,7 +47,6 @@ struct WeSplitFeature {
 }
 
 struct WeSplitView: View {
-    private let tipPercentages: [Double] = Array(0...100).map { Double($0) / 100 }
     @Bindable var store: StoreOf<WeSplitFeature>
     @FocusState private var amountIsFocused: Bool
     
@@ -65,11 +65,11 @@ struct WeSplitView: View {
             }
             Section("How much tip do you want to leave?") {
                 Picker("Tip percentage", selection: $store.tipPercentage) {
-                    ForEach(tipPercentages, id: \.self) {
+                    ForEach(store.tipPercentages, id: \.self) {
                         Text($0, format: .percent).tag($0)
                     }
                 }
-                .pickerStyle(.navigationLink)
+                .pickerStyle(.segmented)
             }
             Section("Total Amount") {
                 Text(store.total, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
