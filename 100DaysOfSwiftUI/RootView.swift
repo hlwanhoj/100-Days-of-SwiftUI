@@ -16,6 +16,7 @@ struct RootFeature {
         case challenge1(Challenge1Feature)
         case guessTheFlag(GuessTheFlagFeature)
         case betterRest(BetterRestFeature)
+        case wordScramble(WordScrambleFeature)
     }
     
     @ObservableState
@@ -65,6 +66,11 @@ struct RootView: View {
                 ) {
                     Text("BetterRest")
                 }
+                NavigationLink(
+                    state: RootFeature.Path.State.wordScramble(WordScrambleFeature.State())
+                ) {
+                    Text("Word Scramble")
+                }
             }
             .navigationTitle("Menu")
         } destination: { store in
@@ -77,6 +83,8 @@ struct RootView: View {
                 GuessTheFlagView(store: store)
             case let .betterRest(store):
                 BetterRestView(store: store)
+            case let .wordScramble(store):
+                WordScrambleView(store: store)
             }
         }
     }
