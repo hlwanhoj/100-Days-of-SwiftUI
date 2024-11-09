@@ -22,6 +22,7 @@ struct GuessTheFlagFeature {
         @Presents var alert: AlertState<Alert>?
         var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"]
         var correctAnswer = Int.random(in: 0...2)
+        var tappedFlag: Int?
         var score = 0
         var round = 1
     }
@@ -50,6 +51,7 @@ struct GuessTheFlagFeature {
             case .alert:
               return .none
             case let .tapFlag(idx):
+                state.tappedFlag = idx
                 if idx == state.correctAnswer {
                     let score = state.score + 1
                     state.score = score
@@ -74,6 +76,7 @@ struct GuessTheFlagFeature {
                 }
                 return .none
             case .nextRound:
+                state.tappedFlag = nil
                 if state.round >= 8 {
                     let score = state.score
                     state.alert = AlertState {
@@ -126,7 +129,7 @@ struct GuessTheFlagView: View {
                     }
                     
                     ForEach(Array(zip(countries.indices, countries)), id: \.1) { idx, item in
-                        FlagImage(imageKey: "GuessTheFlag/\(item)") {
+                        FlagImage(imageKey: "GuessTheFlag/\(item)", isSelected: store.tappedFlag.map { $0 == idx }) {
                             store.send(.tapFlag(idx))
                         }
                     }
@@ -164,12 +167,21 @@ struct GuessTheFlagView: View {
 
 struct FlagImage: View {
     let imageKey: String
+    let isSelected: Bool?
     let action: @MainActor () -> Void
-
+    @State private var animationAmount = 0.0
+    
     var body: some View {
-        Button(action: action) {
+        Button {
+            animationAmount += 360
+            action()
+        } label: {
             Image(imageKey)
                 .shadow(radius: 5)
         }
+        .opacity((isSelected ?? true) ? 1 : 0.25)
+        .animation(isSelected == nil ? nil : .easeInOut(duration: 0.25), value: isSelected)
+        .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
+        .animation(.spring(duration: 0.67, bounce: 0.5), value: animationAmount)
     }
 }
