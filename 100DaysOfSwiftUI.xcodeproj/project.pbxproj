@@ -23,6 +23,13 @@
 		EEB65FFA2C89C3D200694A4A /* _00DaysOfSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FF92C89C3D200694A4A /* _00DaysOfSwiftUIUITestsLaunchTests.swift */; };
 		EEB660082C91E19600694A4A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EEB660072C91E19600694A4A /* ComposableArchitecture */; };
 		EEB6600A2C91E1CA00694A4A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB660092C91E1CA00694A4A /* RootView.swift */; };
+		EED2A9652CF3139A00DCA55B /* MoonshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A9642CF3139A00DCA55B /* MoonshotView.swift */; };
+		EED2A9682CF3526100DCA55B /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = EED2A9662CF3526000DCA55B /* astronauts.json */; };
+		EED2A9692CF3526100DCA55B /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = EED2A9672CF3526100DCA55B /* missions.json */; };
+		EED2A96B2CF3547E00DCA55B /* iExpenseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A96A2CF3547E00DCA55B /* iExpenseModels.swift */; };
+		EED2A96D2CF354E400DCA55B /* MoonshotModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A96C2CF354E400DCA55B /* MoonshotModels.swift */; };
+		EED2A96F2CF365E100DCA55B /* MoonshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A96E2CF365E100DCA55B /* MoonshotHelpers.swift */; };
+		EED2A9712CF36E4400DCA55B /* MoonshotMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A9702CF36E4400DCA55B /* MoonshotMissionView.swift */; };
 		EEE5C2F62CDE6B30000D5367 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2F52CDE6B30000D5367 /* SleepCalculator.mlmodel */; };
 		EEE5C2F82CDE6B4F000D5367 /* BetterRestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2F72CDE6B4F000D5367 /* BetterRestView.swift */; };
 		EEE5C2FB2CDE6F2A000D5367 /* WordScrambleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2FA2CDE6F2A000D5367 /* WordScrambleView.swift */; };
@@ -67,6 +74,13 @@
 		EEB65FF72C89C3D200694A4A /* _00DaysOfSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysOfSwiftUIUITests.swift; sourceTree = "<group>"; };
 		EEB65FF92C89C3D200694A4A /* _00DaysOfSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysOfSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EEB660092C91E1CA00694A4A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		EED2A9642CF3139A00DCA55B /* MoonshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotView.swift; sourceTree = "<group>"; };
+		EED2A9662CF3526000DCA55B /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
+		EED2A9672CF3526100DCA55B /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
+		EED2A96A2CF3547E00DCA55B /* iExpenseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseModels.swift; sourceTree = "<group>"; };
+		EED2A96C2CF354E400DCA55B /* MoonshotModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotModels.swift; sourceTree = "<group>"; };
+		EED2A96E2CF365E100DCA55B /* MoonshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotHelpers.swift; sourceTree = "<group>"; };
+		EED2A9702CF36E4400DCA55B /* MoonshotMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotMissionView.swift; sourceTree = "<group>"; };
 		EEE5C2F52CDE6B30000D5367 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 		EEE5C2F72CDE6B4F000D5367 /* BetterRestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestView.swift; sourceTree = "<group>"; };
 		EEE5C2FA2CDE6F2A000D5367 /* WordScrambleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleView.swift; sourceTree = "<group>"; };
@@ -161,6 +175,7 @@
 				EEE5C2F42CDE6AD0000D5367 /* BetterRest */,
 				EEE5C2F92CDE6F1A000D5367 /* WordScramble */,
 				EEE5C3012CDFE633000D5367 /* iExpense */,
+				EED2A9632CF3138D00DCA55B /* Moonshot */,
 				EEE5C2FC2CDE70C5000D5367 /* Resources */,
 				EEB65FE22C89C3D200694A4A /* Preview Content */,
 			);
@@ -192,6 +207,17 @@
 			path = 100DaysOfSwiftUIUITests;
 			sourceTree = "<group>";
 		};
+		EED2A9632CF3138D00DCA55B /* Moonshot */ = {
+			isa = PBXGroup;
+			children = (
+				EED2A9642CF3139A00DCA55B /* MoonshotView.swift */,
+				EED2A9702CF36E4400DCA55B /* MoonshotMissionView.swift */,
+				EED2A96C2CF354E400DCA55B /* MoonshotModels.swift */,
+				EED2A96E2CF365E100DCA55B /* MoonshotHelpers.swift */,
+			);
+			path = Moonshot;
+			sourceTree = "<group>";
+		};
 		EEE5C2F42CDE6AD0000D5367 /* BetterRest */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				EEE5C2FD2CDE70D3000D5367 /* word-scramble-list.txt */,
+				EED2A9662CF3526000DCA55B /* astronauts.json */,
+				EED2A9672CF3526100DCA55B /* missions.json */,
 				EEB65FE02C89C3D200694A4A /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -223,6 +251,7 @@
 			children = (
 				EEE5C3022CDFE641000D5367 /* iExpenseView.swift */,
 				EEF159782CF2318A0051763B /* iExpenseAddView.swift */,
+				EED2A96A2CF3547E00DCA55B /* iExpenseModels.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -338,8 +367,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEB65FE42C89C3D200694A4A /* Preview Assets.xcassets in Resources */,
+				EED2A9692CF3526100DCA55B /* missions.json in Resources */,
 				EEE5C2FE2CDE70D3000D5367 /* word-scramble-list.txt in Resources */,
 				EEB65FE12C89C3D200694A4A /* Assets.xcassets in Resources */,
+				EED2A9682CF3526100DCA55B /* astronauts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED2A9712CF36E4400DCA55B /* MoonshotMissionView.swift in Sources */,
 				EEA3CC752C99C0CE0061E754 /* Challenge1View.swift in Sources */,
 				EEA3CC6F2C91FD560061E754 /* WeSplitView.swift in Sources */,
 				EEE5C2F82CDE6B4F000D5367 /* BetterRestView.swift in Sources */,
@@ -378,7 +410,11 @@
 				EE31F8DC2C9DD844008F4E93 /* Challenge1Units.swift in Sources */,
 				EEE5C2F62CDE6B30000D5367 /* SleepCalculator.mlmodel in Sources */,
 				EEB65FDF2C89C3D100694A4A /* Item.swift in Sources */,
+				EED2A96D2CF354E400DCA55B /* MoonshotModels.swift in Sources */,
+				EED2A96B2CF3547E00DCA55B /* iExpenseModels.swift in Sources */,
 				EEB65FDB2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift in Sources */,
+				EED2A96F2CF365E100DCA55B /* MoonshotHelpers.swift in Sources */,
+				EED2A9652CF3139A00DCA55B /* MoonshotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
