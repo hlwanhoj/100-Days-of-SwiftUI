@@ -27,6 +27,8 @@
 		EEE5C2F82CDE6B4F000D5367 /* BetterRestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2F72CDE6B4F000D5367 /* BetterRestView.swift */; };
 		EEE5C2FB2CDE6F2A000D5367 /* WordScrambleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2FA2CDE6F2A000D5367 /* WordScrambleView.swift */; };
 		EEE5C2FE2CDE70D3000D5367 /* word-scramble-list.txt in Resources */ = {isa = PBXBuildFile; fileRef = EEE5C2FD2CDE70D3000D5367 /* word-scramble-list.txt */; };
+		EEE5C3032CDFE641000D5367 /* iExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C3022CDFE641000D5367 /* iExpenseView.swift */; };
+		EEF159792CF2318A0051763B /* iExpenseAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF159782CF2318A0051763B /* iExpenseAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		EEE5C2F72CDE6B4F000D5367 /* BetterRestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestView.swift; sourceTree = "<group>"; };
 		EEE5C2FA2CDE6F2A000D5367 /* WordScrambleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleView.swift; sourceTree = "<group>"; };
 		EEE5C2FD2CDE70D3000D5367 /* word-scramble-list.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "word-scramble-list.txt"; sourceTree = "<group>"; };
+		EEE5C3022CDFE641000D5367 /* iExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseView.swift; sourceTree = "<group>"; };
+		EEF159782CF2318A0051763B /* iExpenseAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 				EEA3CC732C99BFA10061E754 /* Challenge1 */,
 				EEE5C2F42CDE6AD0000D5367 /* BetterRest */,
 				EEE5C2F92CDE6F1A000D5367 /* WordScramble */,
+				EEE5C3012CDFE633000D5367 /* iExpense */,
 				EEE5C2FC2CDE70C5000D5367 /* Resources */,
 				EEB65FE22C89C3D200694A4A /* Preview Content */,
 			);
@@ -211,6 +216,15 @@
 				EEB65FE02C89C3D200694A4A /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EEE5C3012CDFE633000D5367 /* iExpense */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5C3022CDFE641000D5367 /* iExpenseView.swift */,
+				EEF159782CF2318A0051763B /* iExpenseAddView.swift */,
+			);
+			path = iExpense;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,10 +367,12 @@
 				EEA3CC752C99C0CE0061E754 /* Challenge1View.swift in Sources */,
 				EEA3CC6F2C91FD560061E754 /* WeSplitView.swift in Sources */,
 				EEE5C2F82CDE6B4F000D5367 /* BetterRestView.swift in Sources */,
+				EEF159792CF2318A0051763B /* iExpenseAddView.swift in Sources */,
 				EE31F8DA2C9C849C008F4E93 /* Challenge1UnitConversionView.swift in Sources */,
 				EE31F8D82C9C8421008F4E93 /* Challenge1UnitType.swift in Sources */,
 				EE31F8DF2C9E76B9008F4E93 /* GuessTheFlagView.swift in Sources */,
 				EEE5C2FB2CDE6F2A000D5367 /* WordScrambleView.swift in Sources */,
+				EEE5C3032CDFE641000D5367 /* iExpenseView.swift in Sources */,
 				EEB6600A2C91E1CA00694A4A /* RootView.swift in Sources */,
 				EEB65FDD2C89C3D100694A4A /* ContentView.swift in Sources */,
 				EE31F8DC2C9DD844008F4E93 /* Challenge1Units.swift in Sources */,
