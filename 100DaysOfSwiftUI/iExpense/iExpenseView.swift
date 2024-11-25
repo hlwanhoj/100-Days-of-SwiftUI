@@ -31,7 +31,7 @@ struct iExpenseFeature {
             switch action {
             case .binding:
                 return .none
-            case let .removeItems(kind, uuids):
+            case let .removeItems(_, uuids):
                 uuids.forEach { uuid in
                     if let idx = state.expenses.items.firstIndex(where: { $0.id == uuid }) {
                         state.expenses.items.remove(at: idx)

@@ -17,9 +17,9 @@ struct MoonshotFeature {
     
     @ObservableState
     struct State {
+        let astronauts: [String: Astronaut] = (try? MoonshotHelper.loadFromFile("astronauts.json")) ?? [:]
+        let missions: [Mission] = (try? MoonshotHelper.loadFromFile("missions.json")) ?? []
         @Presents var destination: Destination.State?
-        var astronauts: [String: Astronaut] = (try? MoonshotHelper.loadFromFile("astronauts.json")) ?? [:]
-        var missions: [Mission] = (try? MoonshotHelper.loadFromFile("missions.json")) ?? []
     }
     
     // `BindableAction` can let properties in state bindable to UI

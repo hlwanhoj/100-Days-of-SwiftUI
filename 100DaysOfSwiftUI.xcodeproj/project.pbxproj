@@ -30,6 +30,7 @@
 		EED2A96D2CF354E400DCA55B /* MoonshotModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A96C2CF354E400DCA55B /* MoonshotModels.swift */; };
 		EED2A96F2CF365E100DCA55B /* MoonshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A96E2CF365E100DCA55B /* MoonshotHelpers.swift */; };
 		EED2A9712CF36E4400DCA55B /* MoonshotMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A9702CF36E4400DCA55B /* MoonshotMissionView.swift */; };
+		EEE13A3C2CF40D8300505626 /* MoonshotAstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE13A3B2CF40D8300505626 /* MoonshotAstronautView.swift */; };
 		EEE5C2F62CDE6B30000D5367 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2F52CDE6B30000D5367 /* SleepCalculator.mlmodel */; };
 		EEE5C2F82CDE6B4F000D5367 /* BetterRestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2F72CDE6B4F000D5367 /* BetterRestView.swift */; };
 		EEE5C2FB2CDE6F2A000D5367 /* WordScrambleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2FA2CDE6F2A000D5367 /* WordScrambleView.swift */; };
@@ -81,6 +82,7 @@
 		EED2A96C2CF354E400DCA55B /* MoonshotModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotModels.swift; sourceTree = "<group>"; };
 		EED2A96E2CF365E100DCA55B /* MoonshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotHelpers.swift; sourceTree = "<group>"; };
 		EED2A9702CF36E4400DCA55B /* MoonshotMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotMissionView.swift; sourceTree = "<group>"; };
+		EEE13A3B2CF40D8300505626 /* MoonshotAstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotAstronautView.swift; sourceTree = "<group>"; };
 		EEE5C2F52CDE6B30000D5367 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 		EEE5C2F72CDE6B4F000D5367 /* BetterRestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestView.swift; sourceTree = "<group>"; };
 		EEE5C2FA2CDE6F2A000D5367 /* WordScrambleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleView.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				EED2A9642CF3139A00DCA55B /* MoonshotView.swift */,
 				EED2A9702CF36E4400DCA55B /* MoonshotMissionView.swift */,
+				EEE13A3B2CF40D8300505626 /* MoonshotAstronautView.swift */,
 				EED2A96C2CF354E400DCA55B /* MoonshotModels.swift */,
 				EED2A96E2CF365E100DCA55B /* MoonshotHelpers.swift */,
 			);
@@ -411,6 +414,7 @@
 				EEE5C2F62CDE6B30000D5367 /* SleepCalculator.mlmodel in Sources */,
 				EEB65FDF2C89C3D100694A4A /* Item.swift in Sources */,
 				EED2A96D2CF354E400DCA55B /* MoonshotModels.swift in Sources */,
+				EEE13A3C2CF40D8300505626 /* MoonshotAstronautView.swift in Sources */,
 				EED2A96B2CF3547E00DCA55B /* iExpenseModels.swift in Sources */,
 				EEB65FDB2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift in Sources */,
 				EED2A96F2CF365E100DCA55B /* MoonshotHelpers.swift in Sources */,
