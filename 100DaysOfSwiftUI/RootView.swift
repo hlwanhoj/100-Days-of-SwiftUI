@@ -18,6 +18,7 @@ struct RootFeature {
         case betterRest(BetterRestFeature)
         case wordScramble(WordScrambleFeature)
         case iExpense(iExpenseFeature)
+        case Moonshot(MoonshotFeature)
     }
     
     @ObservableState
@@ -77,6 +78,11 @@ struct RootView: View {
                 ) {
                     Text("iExpense")
                 }
+                NavigationLink(
+                    state: RootFeature.Path.State.Moonshot(MoonshotFeature.State())
+                ) {
+                    Text("Moonshot")
+                }
             }
             .navigationTitle("Menu")
         } destination: { store in
@@ -93,6 +99,8 @@ struct RootView: View {
                 WordScrambleView(store: store)
             case let .iExpense(store):
                 iExpenseView(store: store)
+            case let .Moonshot(store):
+                MoonshotView(store: store)
             }
         }
     }

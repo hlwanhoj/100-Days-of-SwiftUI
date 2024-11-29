@@ -13,7 +13,7 @@ Below is a list of the projects and challenges completed throughout the course:
 | BetterRest              | ✔ |
 | Word Scramble           | ✔ |
 | iExpense                | ✔ |
-| Moonshot                |   |
+| Moonshot                | ✔ |
 | Cupcake Corner          |   |
 | Bookworm                |   |
 | Instafilter             |   |
