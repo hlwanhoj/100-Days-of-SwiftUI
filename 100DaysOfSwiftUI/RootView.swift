@@ -18,7 +18,8 @@ struct RootFeature {
         case betterRest(BetterRestFeature)
         case wordScramble(WordScrambleFeature)
         case iExpense(iExpenseFeature)
-        case Moonshot(MoonshotFeature)
+        case moonshot(MoonshotFeature)
+        case cupcakeCorner(CupcakeCornerFeature)
     }
     
     @ObservableState
@@ -79,9 +80,14 @@ struct RootView: View {
                     Text("iExpense")
                 }
                 NavigationLink(
-                    state: RootFeature.Path.State.Moonshot(MoonshotFeature.State())
+                    state: RootFeature.Path.State.moonshot(MoonshotFeature.State())
                 ) {
                     Text("Moonshot")
+                }
+                NavigationLink(
+                    state: RootFeature.Path.State.cupcakeCorner(CupcakeCornerFeature.State())
+                ) {
+                    Text("Cupcake Corner")
                 }
             }
             .navigationTitle("Menu")
@@ -99,8 +105,10 @@ struct RootView: View {
                 WordScrambleView(store: store)
             case let .iExpense(store):
                 iExpenseView(store: store)
-            case let .Moonshot(store):
+            case let .moonshot(store):
                 MoonshotView(store: store)
+            case let .cupcakeCorner(store):
+                CupcakeCornerView(store: store)
             }
         }
     }

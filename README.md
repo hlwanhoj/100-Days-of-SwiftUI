@@ -14,7 +14,7 @@ Below is a list of the projects and challenges completed throughout the course:
 | Word Scramble           | ✔ |
 | iExpense                | ✔ |
 | Moonshot                | ✔ |
-| Cupcake Corner          |   |
+| Cupcake Corner          | ✔ |
 | Bookworm                |   |
 | Instafilter             |   |
 | Bucket List             |   |

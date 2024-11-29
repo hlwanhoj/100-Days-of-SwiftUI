@@ -74,6 +74,7 @@ struct MoonshotView: View {
                 }
             }
         }
+        .background(MoonshotTheme.darkBackground)
         .navigationTitle("Moonshot")
         .toolbar {
             if store.isShowingGrid {
@@ -88,7 +89,6 @@ struct MoonshotView: View {
                 .tint(Color.white)
             }
         }
-        .background(MoonshotTheme.darkBackground)
         .preferredColorScheme(.dark)
         .navigationDestination(
             item: $store.scope(

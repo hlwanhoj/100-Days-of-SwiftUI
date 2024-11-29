@@ -13,6 +13,9 @@
 		EE31F8DF2C9E76B9008F4E93 /* GuessTheFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE31F8DE2C9E76B9008F4E93 /* GuessTheFlagView.swift */; };
 		EEA3CC6F2C91FD560061E754 /* WeSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3CC6E2C91FD560061E754 /* WeSplitView.swift */; };
 		EEA3CC752C99C0CE0061E754 /* Challenge1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3CC742C99C0CE0061E754 /* Challenge1View.swift */; };
+		EEA626B42CF993630043857C /* CupcakeCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA626B32CF993630043857C /* CupcakeCornerView.swift */; };
+		EEA626B62CF993A90043857C /* CupcakeCornerOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA626B52CF993A90043857C /* CupcakeCornerOrder.swift */; };
+		EEB1711A2CFC67B500FFA134 /* CupcakeCornerAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB171192CFC67B500FFA134 /* CupcakeCornerAddressView.swift */; };
 		EEB65FDB2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDA2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift */; };
 		EEB65FDD2C89C3D100694A4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDC2C89C3D100694A4A /* ContentView.swift */; };
 		EEB65FDF2C89C3D100694A4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB65FDE2C89C3D100694A4A /* Item.swift */; };
@@ -30,6 +33,8 @@
 		EED2A96D2CF354E400DCA55B /* MoonshotModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A96C2CF354E400DCA55B /* MoonshotModels.swift */; };
 		EED2A96F2CF365E100DCA55B /* MoonshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A96E2CF365E100DCA55B /* MoonshotHelpers.swift */; };
 		EED2A9712CF36E4400DCA55B /* MoonshotMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2A9702CF36E4400DCA55B /* MoonshotMissionView.swift */; };
+		EED8DAD42CFC77EC00F0607A /* CupcakeCornerCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8DAD32CFC77EC00F0607A /* CupcakeCornerCheckoutView.swift */; };
+		EED8DAD62CFCC30600F0607A /* CupcakeCornerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8DAD52CFCC30600F0607A /* CupcakeCornerHelper.swift */; };
 		EEE13A3C2CF40D8300505626 /* MoonshotAstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE13A3B2CF40D8300505626 /* MoonshotAstronautView.swift */; };
 		EEE5C2F62CDE6B30000D5367 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2F52CDE6B30000D5367 /* SleepCalculator.mlmodel */; };
 		EEE5C2F82CDE6B4F000D5367 /* BetterRestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C2F72CDE6B4F000D5367 /* BetterRestView.swift */; };
@@ -63,6 +68,9 @@
 		EE31F8DE2C9E76B9008F4E93 /* GuessTheFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagView.swift; sourceTree = "<group>"; };
 		EEA3CC6E2C91FD560061E754 /* WeSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitView.swift; sourceTree = "<group>"; };
 		EEA3CC742C99C0CE0061E754 /* Challenge1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge1View.swift; sourceTree = "<group>"; };
+		EEA626B32CF993630043857C /* CupcakeCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerView.swift; sourceTree = "<group>"; };
+		EEA626B52CF993A90043857C /* CupcakeCornerOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerOrder.swift; sourceTree = "<group>"; };
+		EEB171192CFC67B500FFA134 /* CupcakeCornerAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerAddressView.swift; sourceTree = "<group>"; };
 		EEB65FD72C89C3D100694A4A /* 100DaysOfSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100DaysOfSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB65FDA2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysOfSwiftUIApp.swift; sourceTree = "<group>"; };
 		EEB65FDC2C89C3D100694A4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +90,8 @@
 		EED2A96C2CF354E400DCA55B /* MoonshotModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotModels.swift; sourceTree = "<group>"; };
 		EED2A96E2CF365E100DCA55B /* MoonshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotHelpers.swift; sourceTree = "<group>"; };
 		EED2A9702CF36E4400DCA55B /* MoonshotMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotMissionView.swift; sourceTree = "<group>"; };
+		EED8DAD32CFC77EC00F0607A /* CupcakeCornerCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerCheckoutView.swift; sourceTree = "<group>"; };
+		EED8DAD52CFCC30600F0607A /* CupcakeCornerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerHelper.swift; sourceTree = "<group>"; };
 		EEE13A3B2CF40D8300505626 /* MoonshotAstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotAstronautView.swift; sourceTree = "<group>"; };
 		EEE5C2F52CDE6B30000D5367 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 		EEE5C2F72CDE6B4F000D5367 /* BetterRestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestView.swift; sourceTree = "<group>"; };
@@ -144,6 +154,18 @@
 			path = Challenge1;
 			sourceTree = "<group>";
 		};
+		EEA626B22CF993530043857C /* CupcakeCorner */ = {
+			isa = PBXGroup;
+			children = (
+				EEA626B32CF993630043857C /* CupcakeCornerView.swift */,
+				EEB171192CFC67B500FFA134 /* CupcakeCornerAddressView.swift */,
+				EED8DAD32CFC77EC00F0607A /* CupcakeCornerCheckoutView.swift */,
+				EEA626B52CF993A90043857C /* CupcakeCornerOrder.swift */,
+				EED8DAD52CFCC30600F0607A /* CupcakeCornerHelper.swift */,
+			);
+			path = CupcakeCorner;
+			sourceTree = "<group>";
+		};
 		EEB65FCE2C89C3D100694A4A = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +200,7 @@
 				EEE5C2F92CDE6F1A000D5367 /* WordScramble */,
 				EEE5C3012CDFE633000D5367 /* iExpense */,
 				EED2A9632CF3138D00DCA55B /* Moonshot */,
+				EEA626B22CF993530043857C /* CupcakeCorner */,
 				EEE5C2FC2CDE70C5000D5367 /* Resources */,
 				EEB65FE22C89C3D200694A4A /* Preview Content */,
 			);
@@ -400,11 +423,14 @@
 			files = (
 				EED2A9712CF36E4400DCA55B /* MoonshotMissionView.swift in Sources */,
 				EEA3CC752C99C0CE0061E754 /* Challenge1View.swift in Sources */,
+				EED8DAD42CFC77EC00F0607A /* CupcakeCornerCheckoutView.swift in Sources */,
+				EED8DAD62CFCC30600F0607A /* CupcakeCornerHelper.swift in Sources */,
 				EEA3CC6F2C91FD560061E754 /* WeSplitView.swift in Sources */,
 				EEE5C2F82CDE6B4F000D5367 /* BetterRestView.swift in Sources */,
 				EEF159792CF2318A0051763B /* iExpenseAddView.swift in Sources */,
 				EE31F8DA2C9C849C008F4E93 /* Challenge1UnitConversionView.swift in Sources */,
 				EE31F8D82C9C8421008F4E93 /* Challenge1UnitType.swift in Sources */,
+				EEB1711A2CFC67B500FFA134 /* CupcakeCornerAddressView.swift in Sources */,
 				EE31F8DF2C9E76B9008F4E93 /* GuessTheFlagView.swift in Sources */,
 				EEE5C2FB2CDE6F2A000D5367 /* WordScrambleView.swift in Sources */,
 				EEE5C3032CDFE641000D5367 /* iExpenseView.swift in Sources */,
@@ -416,7 +442,9 @@
 				EED2A96D2CF354E400DCA55B /* MoonshotModels.swift in Sources */,
 				EEE13A3C2CF40D8300505626 /* MoonshotAstronautView.swift in Sources */,
 				EED2A96B2CF3547E00DCA55B /* iExpenseModels.swift in Sources */,
+				EEA626B42CF993630043857C /* CupcakeCornerView.swift in Sources */,
 				EEB65FDB2C89C3D100694A4A /* _00DaysOfSwiftUIApp.swift in Sources */,
+				EEA626B62CF993A90043857C /* CupcakeCornerOrder.swift in Sources */,
 				EED2A96F2CF365E100DCA55B /* MoonshotHelpers.swift in Sources */,
 				EED2A9652CF3139A00DCA55B /* MoonshotView.swift in Sources */,
 			);
